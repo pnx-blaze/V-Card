@@ -1,5 +1,6 @@
 * {
     font-family: cursive;
+    margin: 20px;
 }
 
 body {
@@ -20,7 +21,7 @@ h1 {
 
 .valentines {
     position: relative;
-    top: 100px;
+    top: 150px;
     cursor: pointer;
     animation: up 3s linear infinite;
 }
