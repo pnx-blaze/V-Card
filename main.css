@@ -1,0 +1,145 @@
+* {
+    font-family: cursive;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background: #fae1dd;
+}
+
+h1 {
+    color: #003049;
+
+}
+
+.container {
+    position: relative;
+}
+
+.valentines {
+    position: relative;
+    top: 10px;
+    cursor: pointer;
+    animation: up 3s linear infinite;
+}
+
+.envelope {
+    position: relative;
+    width: 400px;
+    height: 250px;
+    background: #f08080;
+    display: grid;
+    place-items: center;
+}
+
+.envelope::before {
+    content: '';
+    position: absolute;
+    width: 215px;
+    height: 225px;
+    background: #f08080;
+    transform: rotate(45deg);
+    top: -105px;
+    left: 93px;
+    border-radius: 30px 0 0 0;
+    scale: 1.323;
+}
+
+.front {
+    position: absolute;
+    border-right: 190px solid #f4978e;
+    border-top: 225px solid transparent;
+    border-bottom: 60px solid transparent;
+    left: 220px;
+    top: 5;
+    width: 0;
+    height: 0;
+    z-index: 10;
+}
+
+.front::before {
+    position: absolute;
+    content: '';
+    border-left: 415px solid #fda996;
+    border-top: 280px solid transparent;
+    left: -225px;
+    top: -220px;
+}
+
+.card {
+    position: relative;
+    width: 370px;
+    height: 250px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 2px;
+    display: grid;
+    place-items: center;
+    transition: 1s;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 2px dashed #003049;
+}
+
+.valentines:active .card {
+    transform: translateY(-230px);
+}
+
+.card .text {
+    font-size: 16px;
+    text-align: center;
+    line-height: 25px;
+    color: #003049;
+}
+
+.card .sign {
+    color: #003049;
+    text-align: right;
+    font-size: 16px;
+}
+
+#heart {
+    height: 10vh;
+    margin-top: -70px;
+    z-index: -1;
+    margin-left: 280px;
+}
+
+@keyframes up {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.valentines::before {
+    content: '';
+    position: absolute;
+    width: 450px;
+    height: 25px;
+    border-radius: 50%;
+    background: hsla(0, 0%, 0%, 0.3);
+    top: 350px;
+    left: -15px;
+    animation: scale 3s linear infinite;
+}
+
+@keyframes scale{
+    0%, 100% {
+        transform: scaleX(1);
+    }
+    50% {
+        transform: scaleX(.85);
+    }
+}
