@@ -21,6 +21,7 @@ h1 {
 
 .valentines {
     position: relative;
+    margin-top: 40px;
     top: 150px;
     cursor: pointer;
     animation: up 3s linear infinite;
