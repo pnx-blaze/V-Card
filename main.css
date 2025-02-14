@@ -20,7 +20,7 @@ h1 {
 
 .valentines {
     position: relative;
-    top: 10px;
+    top: 100px;
     cursor: pointer;
     animation: up 3s linear infinite;
 }
